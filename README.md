@@ -14,6 +14,7 @@ pip install keras-transformer
 
 * Jupyter notebook experiment.ipynb was run on Google Colab Pro
 * Dataset generated in Mathematica
+* Implementation of beam search is adapted from the one found here: https://github.com/mmehdig/lm_beam_search/blob/master/beam_search.py (credit to @mmehdig)
 
 # Other
 
