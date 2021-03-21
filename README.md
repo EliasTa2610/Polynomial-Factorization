@@ -1,4 +1,4 @@
-# Polynomial_Factorization
+# Polynomial Factorization
 
 # Introduction
 
