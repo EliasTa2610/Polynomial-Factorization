@@ -2,7 +2,7 @@
 
 # Introduction
 
-This is an experiment where I tried to see how well could a transformer model learn to decompose polynomials with integer coefficients into their irreducible factors.
+This is an experiment where I tried to see how well could a transformer model neural network learn to decompose polynomials with integer coefficients into their irreducible factors.
 
 # Technical
 * Written for Python 3
