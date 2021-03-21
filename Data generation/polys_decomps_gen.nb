@@ -1,0 +1,120 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3763,        110]
+NotebookOptionsPosition[      3411,         96]
+NotebookOutlinePosition[      3810,        112]
+CellTagsIndexPosition[      3767,        109]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "9"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ite", " ", "=", " ", "20000000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "0"}], ",", 
+   RowBox[{"i", "<", " ", "ite"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"a", " ", "=", " ", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", "n"}], "]"}]}],
+     ";", "\[IndentingNewLine]", 
+    RowBox[{"poly", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"x", "^", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", " ", 
+         RowBox[{"n", " ", "-", " ", "1"}]}], "]"}]}], ".", "a"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"leadCoeff", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"CoefficientList", "[", 
+       RowBox[{"poly", ",", " ", "x"}], "]"}], " ", "//", " ", "Last"}]}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"coeffSign", " ", "=", " ", 
+     RowBox[{"Sign", "[", "leadCoeff", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"a", " ", "=", " ", 
+     RowBox[{"coeffSign", "*", "a"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"poly", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"x", "^", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", " ", 
+         RowBox[{"n", " ", "-", " ", "1"}]}], "]"}]}], ".", "a"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"factors", " ", "=", " ", 
+     RowBox[{"FactorList", "[", "poly", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"bigList", " ", "=", " ", 
+     RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Do", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"factor", ",", " ", "power"}], "}"}], "=", "j"}], ";", " ", 
+       RowBox[{"f", " ", "=", 
+        RowBox[{"Expand", "[", 
+         RowBox[{"factor", "^", "power"}], "]"}]}], ";", 
+       RowBox[{"bigList", " ", "=", " ", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", "f", "}"}], ",", " ", "bigList"}], "]"}]}]}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "factors"}], "}"}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"bigList", " ", "=", " ", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"{", "poly", "}"}], ",", " ", "bigList"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"bigList", " ", "=", " ", 
+     RowBox[{"CoefficientList", "[", 
+      RowBox[{"bigList", ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"WriteLine", "[", 
+     RowBox[{"\"\<filepath\>\"", ",", " ", "bigList"}], "]"}]}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.825287074388109*^9, 
+  3.825287097711768*^9}},ExpressionUUID->"d97563d9-c8f6-4c03-9cc9-\
+da8da77fa841"]
+},
+WindowSize->{759, 601},
+WindowMargins->{{Automatic, 283}, {-15, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4994b264-0c40-4838-b262-0b7b41d0f7a2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2849, 74, 314, "Input",ExpressionUUID->"d97563d9-c8f6-4c03-9cc9-da8da77fa841"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
