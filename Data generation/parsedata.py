@@ -37,8 +37,8 @@ with open(filename, 'rb') as file:
         factors = np.concatenate(factors)
         decomp.append(factors)
 
-with open('decomps.pkl', 'wb') as file:
+with open('polys.pkl', 'wb') as file:
     pk.dump(polys, file)
 
-with open('polys.pkl', 'wb') as file:
+with open('decomps.pkl', 'wb') as file:
     pk.dump(decomp, file)
