@@ -18,6 +18,6 @@ pip install keras-transformer
 
 # Other
 
-* All datasets used in the experiment as well as the trained neural netowrk can download from the following link: 
+* All datasets used in the experiment as well as the trained neural network can be downloaded from the following link: 
 https://drive.google.com/drive/folders/1kG0wNXZh6q4olevjSKWV2RDJ_0720nO_?usp=sharing
 * The folder ./Data generation contains the Mathematica script used to generate the dataset as well as the python script used to subsequently parse the data
