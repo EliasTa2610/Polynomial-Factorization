@@ -5,7 +5,7 @@
 This is an experiment where I tried to see how well could a transformer model neural network learn to decompose polynomials with integer coefficients into their irreducible factors.
 
 # Technical
-* Written for Python 3
+* Written for Python 3.7
 * Uses keras with TensorFlow 2 and the package keras-transformer. You can install the latter via
 
 ```console
